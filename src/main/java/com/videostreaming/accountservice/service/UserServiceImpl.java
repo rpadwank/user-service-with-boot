@@ -17,14 +17,14 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public boolean userLogin(String email, String password) {
+	public UserProfile userLogin(String email, String password) {
 	
 		UserProfile profile= dao.getOne(email);
 		if(profile.getPassword().equals(password))
 		{
-			return true;
+			return profile;
 		}
-		return false;
+		return null;
 	}
 
 	@Override

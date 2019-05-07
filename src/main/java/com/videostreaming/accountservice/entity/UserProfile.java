@@ -3,14 +3,17 @@ package com.videostreaming.accountservice.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class UserProfile {
 	
-	
-	private String firstName;
-	private String lastName;
 	@Id
 	private String email;
+	private String firstName;
+	private String lastName;
+	
 	private String password;
 	private String channelName;
 	public UserProfile() {

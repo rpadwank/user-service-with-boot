@@ -4,7 +4,7 @@ import com.videostreaming.accountservice.entity.UserProfile;
 
 public interface UserService {
 
-	UserProfile createProfile(UserProfile profile);
-	boolean userLogin(String email,String password);
-	void updateProfile(UserProfile profile);
+	public UserProfile createProfile(UserProfile profile);
+	public UserProfile userLogin(String email,String password);
+	public void updateProfile(UserProfile profile);
 }
